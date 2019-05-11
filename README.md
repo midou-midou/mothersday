@@ -4,5 +4,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 具体的展示就看网址吧，哈哈，祝全天下的母亲母亲节快乐呀
 
-[项目](http://mothersday.xiaoblogs.cn:85/index.html)
+[项目](http://mothersday.xiaoblogs.cn:85)
 
