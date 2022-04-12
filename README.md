@@ -1,8 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 母亲节祝福语打字机效果React
 
-## 母亲节的一个特别的react小组件
+![](https://static.xiaoblogs.cn/img/mom.gif)
 
-具体的展示就看网址吧，哈哈，祝全天下的母亲母亲节快乐呀
+### 实现思路：
 
-[项目](http://mothersday.xiaoblogs.cn:85)
+数据结构为一个数组，里面有每一行的文字（你想写给母亲的话）。之后便利每一个数组元素的每一个字，更新放到页面的数据就好
+
+#### 最后：
+
+当时是在大学，19年的5月份母亲节当天的凌晨赶出来的。那会儿刚接触React不到半个月，练手的项目。希望看到这个项目的朋友加油努力，早日成为Frontend Master🍺
 

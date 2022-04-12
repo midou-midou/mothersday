@@ -5,7 +5,6 @@ class Life extends Component{
     constructor(props){
         super(props);
         this.state = {
-            id: 0,
             sayToMother: '',
             talkToMother: [
                 "小时候呜呜大哭我什么都记不得啦",
@@ -30,9 +29,9 @@ class Life extends Component{
         return (
             <Fragment>
                 <h1>
-                        <span className="spanfont1">我：</span>
-                        <span className="spanfont">{this.state.sayToMother}</span>
-                        <span className="cursor">|</span>
+                    <span className="spanfont1">我：</span>
+                    <span className="spanfont">{this.state.sayToMother}</span>
+                    <span className="cursor">|</span>
                 </h1>
                 
             </Fragment>
@@ -50,69 +49,27 @@ class Life extends Component{
             if(this.state.talkArrItemIndex === this.state.talkToMother[this.state.talkArrIndex].length + 1){
                 this.setState({
                     talkArrItemIndex: 0,
-                    talkArrIndex: this.state.talkArrIndex + 1,
-                    id: this.state.id + 5
+                    talkArrIndex: this.state.talkArrIndex + 1
                 })
                 this.inMyLifeToSay()
-            }
-            if(this.state.talkArrIndex === this.state.talkToMother.length){
-                this.setState({
-                    talkArrItemIndex: 0,
-                    talkArrIndex: 0,
-                    id: 0
-                })
             }
         }, 300)
     }
 
+    componentWillUnmount(){
+        clearInterval()
+    }
+
     inMyLifeToSay(){
-        switch(this.state.id){
-            case 0:
-                this.setState({
-                    sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
-                });     
-               break;
-            case 5:
-               this.setState({
-                   sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
-               });     
-            break;
-            case 10:
-                this.setState({
-                    sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
-                });     
-               break;
-            case 15:
-               this.setState({
-                   sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
-               });     
-            break;
-            case 20:
-                this.setState({
-                    sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
-                });     
-            break;
-            case 25:
-                this.setState({
-                    sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
-                });     
-            break;
-            case 30:
-                this.setState({
-                    sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
-                });     
-               break;
-            case 35:
-               this.setState({
-                   sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
-               });     
-            break;
-            case 40:
-                this.setState({
-                    sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
-                });     
-            break;
+        if(this.state.talkArrIndex === this.state.talkToMother.length){
+            this.setState({
+                talkArrItemIndex: 0,
+                talkArrIndex: 0
+            })
         }
+        this.setState({
+            sayToMother: this.state.talkToMother[this.state.talkArrIndex].slice(0, this.state.talkArrItemIndex)
+        })
     };
 }
 
