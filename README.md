@@ -2,6 +2,10 @@
 
 ![](https://static.xiaoblogs.cn/img/mom.gif)
 
+#### 上面的Gif打不开可以点击下方链接查看效果：
+
+[demo](https://static.xiaoblogs.cn/img/mom.gif)
+
 ### 实现思路：
 
 数据结构为一个数组，里面有每一行的文字（你想写给母亲的话）。之后便利每一个数组元素的每一个字，更新放到页面的数据就好
